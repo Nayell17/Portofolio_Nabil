@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Nabil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }body {
+  background-color: #0e0e0e;
+  color: white;
+}
+
+header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0e0e0e;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #f27474;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #f27474;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.store-container {
+  margin-top: 120px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 15px 0 10px;
+  color: #f27474;
+}
+
+.product p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.product a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #f27474;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.product a:hover {
+  background: #d85c5c;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #0e0e0e;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Muhammad Nabil</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="lian.html">Keahlian</a>
+      <a href="tugas.html">Tugas</a>
+      <a href="toko.html">Toko</a>
+      <a href="tak.html">Kontak</a>
+    </nav>
+  </header>  <div class="store-container">
+    <div class="product">
+      <img src="https://via.placeholder.com/300x200" alt="PPT Premium">
+      <h3>PPT Premium</h3>
+      <p>Presentasi keren & profesional untuk tugas sekolah. Hubungi aja saya kalau lu mager buat nya</p>
+      <a href="https://wa.me/628xxxxxxxxxx" target="_blank">Hubungi Sekarang</a>
+    </div><div class="product">
+  <img src="https://via.placeholder.com/300x200" alt="Jasa Makalah">
+  <h3>Jasa Buat Makalah</h3>
+  <p>Untuk lu yang mager buatnya, saya siap membuatkannya</p>
+  <a href="https://wa.me/628xxxxxxxxxx" target="_blank">Hubungi Sekarang</a>
+</div>
+
+<div class="product">
+  <img src="https://via.placeholder.com/300x200" alt="Jasa Joki">
+  <h3>Jasa Joki</h3>
+  <p>Joki tugas, Joki game, Joki buat menghabisi makanan mu pun juga bisa</p>
+  <a href="https://wa.me/628xxxxxxxxxx" target="_blank">Hubungi Sekarang</a>
+</div>
+
+<div class="product">
+  <img src="https://via.placeholder.com/300x200" alt="Jual Akun">
+  <h3>Jual Akun</h3>
+  <p>Jual akun game siap pakai, terpercaya dan aman.</p>
+  <a href="https://wa.me/628xxxxxxxxxx" target="_blank">Hubungi Sekarang</a>
+</div>
+
+<div class="product">
+  <img src="https://via.placeholder.com/300x200" alt="Pulsa">
+  <h3>Jual Pulsa</h3>
+  <p>Jual pulsa murah all operator, cepat dan langsung masuk.</p>
+  <a href="https://wa.me/628xxxxxxxxxx" target="_blank">Hubungi Sekarang</a>
+</div>
+
+<div class="product">
+  <img src="https://via.placeholder.com/300x200" alt="Top Up">
+  <h3>Top Up All Payment</h3>
+  <p>Top up game, e-money, dompet digital dll. 100% aman!</p>
+  <a href="https://wa.me/628xxxxxxxxxx" target="_blank">Hubungi Sekarang</a>
+</div>
+
+<div class="product">
+  <img src="https://via.placeholder.com/300x200" alt="Cheat">
+  <h3>Jual Cheat</h3>
+  <p>Buat lu yang noob dan ingin pesan cheat nya langsung saja hubungi saya. dan ingat ini hanya untuk edukasi😎</p>
+  <a href="https://wa.me/628xxxxxxxxxx" target="_blank">Hubungi Sekarang</a>
+</div>
+
+<div class="product">
+  <img src="https://via.placeholder.com/300x200" alt="Handmade">
+  <h3>Barang Handmade</h3>
+  <p>Barang buatan tangan seperti gelang, gantungan kunci, dll. Ini belum ada nanti saya bikin</p>
+  <a href="https://wa.me/628xxxxxxxxxx" target="_blank">Pesan Sekarang</a>
+</div>
+
+  </div>  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script></body>
+</html>

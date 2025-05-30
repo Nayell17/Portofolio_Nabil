@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tugas - Nabil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0e0e0e;
+      color: white;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #f27474;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #f27474;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .content {
+      margin-top: 120px;
+      padding: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .page img {
+      width: 100%;
+      max-height: 1300px;
+      object-fit: contain;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0e0e0e;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Muhammad Nabil</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="lian.html">Keahlian</a>
+      <a href="tugas.html">Tugas</a>
+      <a href="toko.html">Toko</a>
+      <a href="tak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <!-- 11 Halaman Makalah berupa Gambar -->
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+1" alt="Halaman 1"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+2" alt="Halaman 2"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+3" alt="Halaman 3"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+4" alt="Halaman 4"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+5" alt="Halaman 5"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+6" alt="Halaman 6"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+7" alt="Halaman 7"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+8" alt="Halaman 8"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+9" alt="Halaman 9"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+10" alt="Halaman 10"></div>
+    <div class="page"><img src="https://via.placeholder.com/800x1200?text=Halaman+11" alt="Halaman 11"></div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang - Nabil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: white;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0e0e0e;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #f27474;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #f27474;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 120px 30px 50px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #f27474;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0e0e0e;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Muhammad Nabil</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="lian.html">Keahlian</a>
+      <a href="tugas.html">Tugas</a>
+      <a href="toko.html">Toko</a>
+      <a href="tak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Tentang Website Ini</h1>
+    <p>Halo! Nama saya Nabil. Saya adalah seorang pelajar yang sedang membangun website portofolio pribadi untuk belajar dan memperkenalkan diri kepada dunia.</p>
+    <p>Website ini berisi informasi tentang diri saya, keahlian yang saya miliki, tugas-tugas sekolah, serta link ke media sosial saya. Semuanya dirancang untuk memudahkan siapa pun yang ingin mengenal saya lebih dekat.</p>
+    <p>Tujuan utama dari website ini adalah untuk menjadi tempat saya belajar coding, menampilkan karya, dan sebagai langkah awal menuju cita-cita saya menjadi pribadi yang sukses.</p>
+    <p>Terima kasih sudah berkunjung ke website saya. Semoga kamu bisa mendapatkan inspirasi atau informasi yang bermanfaat di sini!</p>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

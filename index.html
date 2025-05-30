@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nabil - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('bg-nabil.jpg') no-repeat right center fixed;
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #f27474;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #f27474;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .hero {
+      margin-top: 100px;
+      padding: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .hero img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      background-color: red;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+    }
+
+    .hero-text h2 {
+      font-size: 1.5rem;
+      color: #f27474;
+      margin: 10px 0;
+    }
+
+    .socials {
+      margin: 20px 0;
+    }
+
+    .socials a {
+      color: white;
+      margin-right: 15px;
+      font-size: 1.5rem;
+    }
+
+    .hire-btn {
+      padding: 10px 20px;
+      border: 2px solid #f27474;
+      background: transparent;
+      color: #f27474;
+      cursor: pointer;
+      border-radius: 30px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        padding: 80px 100px;
+        gap: 100px;
+      }
+
+      .hero img {
+        width: 350px;
+        height: 350px;
+      }
+
+      .hero-text h1 {
+        font-size: 4rem;
+      }
+
+      .hero-text h2 {
+        font-size: 2rem;
+      }
+
+      .socials a {
+        font-size: 2rem;
+      }
+
+      .hire-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Muhammad Nabil</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="navbar">
+      <a href="#">Home</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="lian.html">Keahlian</a>
+      <a href="tugas.html">Tugas</a>
+      <a href="toko.html">Toko</a>
+      <a href="tak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="profil.jpg" alt="Profile">
+    <div class="hero-text">
+      <h1>Halo, saya <span style="color: #f27474;">Nabil</span></h1>
+      <h2>Saya seorang pelajar</h2>
+      <p>Selamat datang di website saya!</p>
+      <div class="socials">
+        <a href="https://www.tiktok.com/@mhmmad_n4b1l?_t=ZS-8wmNpQL9d1V&_r=1"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/nabiel.17?igsh=bzZ6N3Vncno5djJh"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/qr/MIY3BVYDU473H1"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <button class="hire-btn">Hire me</button>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

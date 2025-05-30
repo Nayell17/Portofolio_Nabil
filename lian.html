@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nabil - Keahlian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #0e0e0e;
+      color: white;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0e0e0e;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #f27474;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #f27474;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .content {
+      margin-top: 120px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .skill-box {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(242, 116, 116, 0.2);
+    }
+
+    .skill-box i {
+      font-size: 2rem;
+      color: #f27474;
+      margin-bottom: 10px;
+    }
+
+    .skill-box h3 {
+      margin: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0e0e0e;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Muhammad Nabil</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="lian.html">Keahlian</a>
+      <a href="tugas.html">Tugas</a>
+      <a href="toko.html">Toko</a>
+      <a href="tak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h1>Keahlian Saya</h1>
+    <div class="skills">
+      <div class="skill-box">
+        <i class="fas fa-code"></i>
+        <h3>Programming</h3>
+        <p>Bisa dikit HTML, CSS, dan belajar JavaScript untuk bikin website.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-gamepad"></i>
+        <h3>Gaming</h3>
+        <p>Mahir dalam bermain game.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-language"></i>
+        <h3>Bahasa Inggris</h3>
+        <p>Lagi belajar bahasa inggris dasar dan kosakata sehari-hari.</p>
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-book"></i>
+        <h3>Pelajaran</h3>
+        <p>Suka semua pelajaran apalagi matematika</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
